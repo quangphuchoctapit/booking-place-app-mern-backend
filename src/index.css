@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.tw-btn-primary {
+    @apply p-3 rounded-2xl bg-primary text-white text-lg hover:duration-200 hover:bg-white hover:text-primary border-primary border;
+}
+
+.tw-checkbox {
+    @apply w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600;
+}
+
+input[type='text'].tw-input,
+input[type='email'].tw-input,
+input[type='password'].tw-input {
+    @apply my-2 rounded-2xl border shadow-xl p-3;
+}
