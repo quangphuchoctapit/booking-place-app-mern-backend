@@ -7,7 +7,8 @@ import Login from './pages/auth/Login';
 import Register from './pages/auth/Register';
 import Layout from './pages/Layout';
 import axios from 'axios'
-import Account from './pages/Account';
+import Account from './pages/account/Account';
+import ViewMyPlace from './pages/account/Places/ViewMyPlace';
 
 
 axios.defaults.baseURL = 'http://127.0.0.1:4000'
@@ -21,8 +22,10 @@ const App = () => {
           <Route index element={<IndexPage />} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
-          <Route path='/account/:subpage?' exact element={<Account />} />
+          <Route path='/account/places/:id' exact element={<ViewMyPlace />} />
           <Route path='/account/:subpage/:action' exact element={<Account />} />
+          <Route path='/account/:subpage?' exact element={<Account />} />
+
 
           <Route path='*' exact element={<><div className="">404 not found</div></>} />
 

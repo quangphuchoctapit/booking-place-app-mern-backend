@@ -20,9 +20,9 @@ const Login = () => {
         switch (user?.data?.EC) {
             case 0:
                 toast.success(`Hello, ${user.data.DT.userData.name}`)
-                console.log(user.data.DT.userData)
                 let { name, email } = user.data.DT.userData
-                dispatch(setUserInfo({ name, email }));
+                let { token } = user.data.DT
+                dispatch(setUserInfo({ name, email, token }));
                 navigate('/')
                 break
             case -1:

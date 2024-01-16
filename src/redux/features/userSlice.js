@@ -6,19 +6,22 @@ const userSlice = createSlice({
     initialState: {
         name: '',
         email: '',
-        image: ''
+        image: '',
+        token: ''
     },
     reducers: {
         setUserInfo: (state, action) => {
             state.name = action.payload.name,
                 state.email = action.payload.email,
-                state.image = action.payload.image
+                state.image = action.payload.image,
+                state.token = action.payload.token
         },
         logout: (state) => {
             return state = {
                 name: '',
                 email: '',
-                image: ''
+                image: '',
+                token: ''
             }
         }
     },
